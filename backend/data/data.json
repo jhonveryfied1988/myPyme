@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    { "id": 1, "nombre": "Jhon Pérez", "correo": "admin@inventario.com", "contrasena": "1234", "rol": "administrador" },
+    { "id": 2, "nombre": "Laura Gómez", "correo": "laura@inventario.com", "contrasena": "5678", "rol": "vendedor" }
+  ],
+  "productos": [
+    { "id": 1, "nombre": "Monitor 24\"", "codigo": "MON24", "categoria_id": 1, "unidad_medida": "unidad", "precio": 500000, "stock": 15, "stock_minimo": 5 },
+    { "id": 2, "nombre": "Teclado mecánico", "codigo": "TECLM", "categoria_id": 1, "unidad_medida": "unidad", "precio": 120000, "stock": 2, "stock_minimo": 2 }
+  ],
+  "categorias": [
+    { "id": 1, "nombre": "Tecnología" },
+    { "id": 2, "nombre": "Oficina" }
+  ]
+}
