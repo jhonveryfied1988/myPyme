@@ -4,7 +4,22 @@ exports.getResumen = (req, res) => {
   const db = readData();
   const totalUsuarios = db.usuarios.length;
   const totalProductos = db.productos ? db.productos.length : 0;
-  res.json({ totalUsuarios, totalProductos });
+  
+  // Obtener los últimos 5 productos
+  const productosRecientes = db.productos
+    ? db.productos
+        .slice()
+        .sort((a, b) => b.id - a.id)
+        .slice(0, 5)
+    : [];
+
+  res.json({
+    totalUsuarios,
+    totalProductos,
+    productos: db.productos || [],
+    categorias: db.categorias || [],
+    productosRecientes
+  });
 };
 
 exports.getIndicadores = (req, res) => {

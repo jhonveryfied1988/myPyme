@@ -1,0 +1,27 @@
+{
+  "name": "mypyme",
+  "version": "1.0.0",
+  "description": "Sistema de gestión para pequeñas y medianas empresas",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^2.4.0",
+    "cypress": "^13.0.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "happy-dom": "^12.0.0"
+  }
+} 
